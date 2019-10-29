@@ -1,0 +1,25 @@
+{
+  "name": "webcimes-carousel",
+  "version": "1.0.0",
+  "description": "This package is a carousel for pictures who work in jquery",
+  "main": "webCimesCarousel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebCimes/webcimes-carousel.git"
+  },
+  "author": "WebCimes",
+  "license": "MIT",
+  "keywords": [
+    "carousel"
+  ],
+  "bugs": {
+    "url": "https://github.com/WebCimes/webcimes-carousel/issues"
+  },
+  "homepage": "https://github.com/WebCimes/webcimes-carousel#readme",
+  "dependencies": {
+    "bootstrap": "*"
+  }
+}
