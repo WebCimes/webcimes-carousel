@@ -33,7 +33,6 @@
 				
 				// Sélecteur
 				var selector = $(this);
-				selector.data("selector", selector);
 				
 				// On créer les balises pour les images
 				selector.children("img").wrapAll('<div class="allImages"></div>').wrap('<div class="thisImage"></div>');
@@ -110,9 +109,9 @@
 							// on met la dernière diapo si on demande l'image précédant la première diapo
 							indexImage = nbImages-nbImagesShow;
 						}
-						
+                        
 						// On scroll jusqu'a l'image courante
-						selector.children(".allImages").stop().animate({scrollLeft: parseInt(allImages.eq(indexImage).position().left + selector.children(".allImages").scrollLeft())}, options.transition,'easeInOutCubic');
+						selector.children(".allImages").stop().animate({scrollLeft: parseInt(allImages.eq(indexImage).position().left + selector.children(".allImages").scrollLeft())}, options.transition);
 					}
 					
 					// on met a jour la nav si elle existe
@@ -271,20 +270,21 @@
 		{
 			return this.each(function()
 			{
+				var selector = $(this);
+                
 				// clear le timer
-				var timeOutTransition = $(this).data('timeOutTransition');
+				var timeOutTransition = selector.data('timeOutTransition');
 				clearTimeout(timeOutTransition);
 				
 				// clear le timer
-				var timeOutDelay = $(this).data('timeOutDelay');
+				var timeOutDelay = selector.data('timeOutDelay');
 				clearTimeout(timeOutDelay);
 				
 				// On supprime le resize webCimesCarouselScroll
 				$(window).off("resize.webCimesCarouselScroll");
 				
 				// on supprime tout les évenements
-				var selector = $(this).data('selector');
-				if(typeof selector != 'undefined'){selector.find("*").addBack().off();}
+				selector.find("*").addBack().off();
 			});
 		}
 	};

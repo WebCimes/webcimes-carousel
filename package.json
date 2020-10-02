@@ -1,6 +1,6 @@
 {
   "name": "webcimes-carousel",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This carousel is for pictures and it work with jquery",
   "main": "webCimesCarousel.js",
   "scripts": {
